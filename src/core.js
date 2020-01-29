@@ -1,9 +1,12 @@
 const currentProgress = document.getElementById('current-progress')
 const percentageProgress = document.getElementById('percentage-progress')
 
+const today = new Date()
+const year = today.getFullYear()
+
 const daysPerMonth = {
   1: 31,
-  2: 28,
+  2: year % 4 === 0 ? 29 : 28,
   3: 31,
   4: 30,
   5: 31,
@@ -19,9 +22,8 @@ const daysPerMonth = {
 const countYearDays = (daysPerMonth) => Object.values(daysPerMonth).reduce((acc, curr) => acc + curr)
 const days = countYearDays(daysPerMonth)
 
-const firstDate = new Date('2019-01-01')
-const lastDate = new Date('2019-12-31')
-const today = new Date()
+const firstDate = new Date(`${year}-01-01`)
+const lastDate = new Date(`${year}-12-31`)
 
 const toDays = (milliseconds) => Math.ceil(milliseconds / (1000 * 60 * 60 * 24))
 
