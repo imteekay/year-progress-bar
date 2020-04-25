@@ -7,7 +7,7 @@ const isLeapYear = (year) => ((year % 4 === 0) && (year % 100 !== 0)) || (year %
 
 const daysPerMonth = {
   1: 31,
-  2: isLeapYear(year) ? 29 : 28,
+  2: getFebruaryDays(year),
   3: 31,
   4: 30,
   5: 31,
