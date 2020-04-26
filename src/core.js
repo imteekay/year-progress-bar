@@ -4,6 +4,7 @@ const percentageProgress = document.getElementById('percentage-progress')
 const today = new Date()
 const year = today.getFullYear()
 const isLeapYear = (year) => ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)
+const getFebruaryDays = (year) => isLeapYear(year) ? 29 : 28
 
 const daysPerMonth = {
   1: 31,
