@@ -1,1 +1,1 @@
-# Year Progress Bar
+Deprecated in favor of https://github.com/imteekay/crafting-frontend.
